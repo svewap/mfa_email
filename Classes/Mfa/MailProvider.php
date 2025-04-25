@@ -92,7 +92,7 @@ class MailProvider implements MfaProviderInterface
     public function handleRequest(
         ServerRequestInterface $request,
         MfaProviderPropertyManager $propertyManager,
-        string $type
+        MfaViewType $type
     ): ResponseInterface {
         $this->request = $request;
         $view = GeneralUtility::makeInstance(StandaloneView::class);
